@@ -5,6 +5,7 @@ defined ( 'APPLICATION_ENV' ) || define ( 'APPLICATION_ENV', (getenv ( 'APPLICAT
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
+echo "App v2.2" . PHP_EOL . PHP_EOL;
 
 echo "Hello, Tair! :)" . PHP_EOL . PHP_EOL;
 echo "Trying to connect to sql server in azure..." . PHP_EOL . PHP_EOL;
@@ -27,7 +28,7 @@ if ($conn == FALSE){
     var_dump(sqlsrv_errors());
     die;
 }
-$sql = "select top 10 tblAuthors.* from tblAuthors";
+$sql = "select top 100 tblAuthors.* from tblAuthors";
 $getResults = sqlsrv_query($conn, $sql);
 echo "Reading data from table..." . PHP_EOL . PHP_EOL;
 if ($getResults == false){

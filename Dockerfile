@@ -34,7 +34,7 @@ RUN mkdir -p -m 777 /var/log/mobile/
 COPY src/ /var/www/html/
 
 # expose port 80
-#EXPOSE 80
+EXPOSE 80
 
 # start apache automatically
 CMD ["apache2-foreground"]
